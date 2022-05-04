@@ -1,0 +1,36 @@
+Algoritmo MatrizAleatoriaySumaColumnas
+	
+	lados = Aleatorio(3,5)
+	
+	Dimension matriz(lados,lados)
+	Dimension sumas(lados)
+	
+	
+	Para f=1 Hasta lados Con Paso 1 Hacer
+		Para c=1 Hasta lados Con Paso 1 Hacer
+			matriz(f,c) = Aleatorio(0,100)
+
+		Fin Para
+	Fin Para
+	
+	
+	Para f=1 Hasta lados Con Paso 1 Hacer 
+		escribir "-"
+		Para c=1 Hasta lados Con Paso 1 Hacer 
+			escribir sin saltar matriz(F,C),"-|-"
+			sumas(f) = sumas(f) + matriz(c,f) 
+		Fin Para
+		escribir ""
+	Fin Para
+	
+	escribir "La suma de las columnas es:"
+	
+	Para i=1 Hasta lados Con Paso 1 Hacer 
+		
+		escribir sin saltar sumas(i), "|"
+		
+	Fin Para
+	
+	escribir ""
+	
+FinAlgoritmo

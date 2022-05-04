@@ -1,0 +1,22 @@
+Algoritmo sin_titulo
+	Dimension matriz(3,3)
+	// carga de una matriz
+	Para f=1 Hasta 3 Con Paso 1 Hacer // bucle externo   f
+		Para c=1 Hasta 3 Con Paso 1 Hacer // bucle interno   c
+			Escribir "Como se van cargando los indices ", f, " ", c
+			matriz(f,c) = Aleatorio(20,30)
+			Escribir matriz(f,c)
+		Fin Para
+		Escribir "cambia de fila"
+	Fin Para
+	
+	// recorrer la matriz cargada
+	
+	Para f=1 Hasta 3 Con Paso 1 Hacer // bucle externo   f
+		Para c=1 Hasta 3 Con Paso 1 Hacer // bucle interno   c
+			Escribir Sin Saltar matriz(f,c), " | "
+		Fin Para
+		Escribir ""
+	Fin Para
+	
+FinAlgoritmo

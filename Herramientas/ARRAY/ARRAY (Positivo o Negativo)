@@ -1,0 +1,37 @@
+Algoritmo PARCIAL
+
+	
+	Escribir "Ingresar 10 num "
+	cantidad=10
+	Dimension nm(cantidad)
+	base = 0
+	posi = 0 
+	nega = 0
+	
+	
+	Para i = 1 Hasta cantidad Con Paso 1 Hacer
+		Escribir "numero ", i
+		Escribir "----------------------"
+		Escribir "pon un numero"
+		leer nm(i)
+		
+		si nm(i) >= base Entonces
+			posi = posi + nm(i)
+		SiNo
+			nega = nega + nm(i)
+		FinSi
+		
+	Fin Para
+	
+	Escribir ""
+	Escribir "------------------------------"
+	
+	Para i=1 Hasta 1 Con Paso 1 Hacer
+		Escribir "-------------------------------------------"
+		Escribir "->numeros       ", nm(i)
+		Escribir "-> negativos: ", nega
+		Escribir "-> positivos ", posi
+	Fin Para
+	
+	Escribir "---------------"
+FinAlgoritmo

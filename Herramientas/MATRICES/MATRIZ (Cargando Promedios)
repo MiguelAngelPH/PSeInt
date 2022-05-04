@@ -1,0 +1,17 @@
+Algoritmo sin_titulo
+	Dimension notas(3,3)
+	
+	Para f=1 Hasta 3 Con Paso 1 Hacer
+		Escribir "Me das tu nota escrita?"
+		leer notas(f,1)
+		Escribir "Me das tu nota Oral?"
+		Leer notas(f,2)
+		notas(f,3) = (notas(f,1) + notas(f,2)) / 2
+	Fin Para
+	
+	
+	Para f=1 Hasta 3 Con Paso 1 Hacer // bucle externo   f
+			Escribir "tus notas" notas(f,1),"y" notas(f,2) , "tu promedIo es ", notas(f,3)
+		Fin Para
+	
+FinAlgoritmo

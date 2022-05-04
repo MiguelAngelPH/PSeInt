@@ -1,0 +1,21 @@
+Algoritmo arreglos
+	// declare mi vector con 4 posiciones.
+	// variable del tamaño del vector
+	//es para escoger una palabra al azar
+	
+	escribir "Pone la cantidad de palabras que quieres ingresar y el sistema eligira una al AZAR"
+	leer nmo
+	
+	
+	cantidad = nmo
+	
+	Dimension nombresDeAlumnos(cantidad)
+	
+	// Generar un bucle.
+	Para i = 1 Hasta cantidad Con Paso 1 Hacer
+		Escribir "escribe una palabra", i
+		leer nombresDeAlumnos(i)
+	Fin Para
+	buscada = nombresDeAlumnos(azar(cantidad)+1)
+	escribir buscada
+FinAlgoritmo

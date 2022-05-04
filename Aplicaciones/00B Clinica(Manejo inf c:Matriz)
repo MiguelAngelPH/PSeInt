@@ -1,0 +1,34 @@
+Algoritmo sin_titulo
+	//Cargar una matriz de 5 x 7 con los nacimientos ocurridos durante la semana en cinco clínicas diferentes.
+	// Obtener: el promedio de nacimientos en la semana; el número de día en que hubo mayor cantidad de nacimientos;
+	
+	// y cuál fue la menor cantidad de nacimientos junto con el nombre de la clínica y del día.
+	
+	Dimension nacimientos(5,7) // valores numericos
+	Dimension clinicas(5)      // Literales
+	// cargo el vector de nombres de clinicas
+	clinicas(1) = "Clinica A"
+	clinicas(2) = "Clinica B"
+	clinicas(3) = "Clinica C"
+	clinicas(4) = "Clinica D"
+	clinicas(5) = "Clinica E"
+	
+	// Cargar los datos en la matriz
+	Para f=1 Hasta 5 Con Paso 1 Hacer
+		// nombre de la clinicas
+		Escribir "Clinica: ", clinicas(f)  // la fila me indica el nombre!
+		Para c=1 Hasta 7 Con Paso 1 Hacer
+			nacimientos(f,c) = Aleatorio(0,10) // cargo en forma Aleatorio los nacimientos por día.
+			// aca adentro tengo que hacer las validaciones que me pide el enunciado.
+			// 
+			sumaDeNacimientos = sumaDeNacimientos + nacimientos(f,c)
+			// voy escribiendo lo que cargo
+			Escribir Sin Saltar nacimientos(f,c), " | "
+		Fin Para
+		promedio = sumaDeNacimientos / 7
+		Escribir "El promedio es : ", promedio
+		Escribir ""
+	Fin Para
+	
+	
+FinAlgoritmo

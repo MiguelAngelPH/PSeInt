@@ -1,0 +1,36 @@
+
+	Algoritmo sin_titulo
+		// Simular una caja registradora de
+		// un supermercado.
+		// que la persona que compra necesita factura con iva  = 21% del precio ingresado
+		
+		masproductos = Falso
+		// Hago una cabecera para el ticket
+		Escribir "                          Producto cantidad Precio    subtotal"
+		Escribir "                          ----------------------------------------" 
+		
+		Mientras no masproductos Hacer
+			Escribir "Ingrese nombre de producto"
+			Leer producto
+			
+			Si producto = "0" Entonces
+				masproductos = Verdadero
+			SiNo
+				Escribir "Ingrese cantidad"
+				Leer cantidad
+				Escribir "Ingrese precio"
+				Leer precio
+				subtotal = cantidad * precio
+				Escribir "                          ", producto, " ", cantidad, " $ ", precio, " $ ", subtotal
+				// acumulado del subtotal
+				total = total + subtotal
+				// acumulo el iva solamente.
+				totalIva = totalIva +  ((subtotal * 21) / 100)
+				
+			FinSi
+		Fin Mientras
+		Escribir "                      -----------------------------------"
+		Escribir "                Subtotal sin iva $ ", total
+		Escribir "                iva 21%          $ ", totalIva
+		Escribir "                Total;           $ ", total + totalIva
+FinAlgoritmo

@@ -1,0 +1,33 @@
+Algoritmo arreglos
+	// declare mi vector con 4 posiciones.
+	// variable del tamaño del vector
+	
+	escribir "la cantidad de personas a registrar"
+	leer nmo
+	
+	
+	cantidad = nmo
+	
+	
+	Dimension edadDeAlumnos(cantidad)
+	Dimension nombresDeAlumnos(cantidad)
+	
+	// Generar un bucle.
+	Para i = 1 Hasta cantidad Con Paso 1 Hacer
+		Escribir "Persona numero ", i
+		Escribir "----------------------"
+		Escribir "Me das tu nombre?"
+		leer nombresDeAlumnos(i)
+		Escribir "Me das tu edad?"
+		Leer edadDeAlumnos(i)
+	Fin Para
+	
+	Escribir ""
+	Escribir "------------------------------"
+	// recorrer los vectores para imprimir por pantalla sus contenidos.
+	Para i=1 Hasta cantidad Con Paso 1 Hacer
+		Escribir "Alumno numero: ", i
+		Escribir nombresDeAlumnos(i), " Su edad es: ", edadDeAlumnos(i)
+	Fin Para
+	
+FinAlgoritmo

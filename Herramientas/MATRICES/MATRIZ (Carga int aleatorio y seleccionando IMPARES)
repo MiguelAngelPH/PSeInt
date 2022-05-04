@@ -1,0 +1,43 @@
+Algoritmo sin_titulo
+	
+	
+	Dimension matriz(3,3)
+	// carga de una matriz
+	Contador = 0
+	
+	Para f=1 Hasta 3 Con Paso 1 Hacer // bucle externo   f
+		Para c=1 Hasta 3 Con Paso 1 Hacer // bucle interno   c
+			Escribir "Como se van cargando los indices ", f, " ", c
+			matriz(f,c) = Aleatorio(4,8)
+			Escribir matriz(f,c)
+			
+			elResto = matriz(f,c) mod 2
+			
+			Si elResto >= 1 Entonces
+				contador = contador + matriz(f,c)
+			FinSi
+			
+		Fin Para
+		Escribir "cambia de fila"
+	Fin Para
+	
+	// recorrer la matriz cargada
+	
+	//Para f=1 Hasta 3 Con Paso 1 Hacer // bucle externo   f
+		//Para c=1 Hasta 3 Con Paso 1 Hacer // bucle interno   c
+			//Escribir "Dato f,c ", f, " ", c, " Valor: ", matriz(f,c)
+		//Fin Para
+		//Escribir "cambia de fila"
+	//Fin Para
+	ESCRIBIR "////////////////-------------"
+	
+	Para f=1 Hasta 3 Con Paso 1 Hacer // bucle externo   f
+		Para c=1 Hasta 3 Con Paso 1 Hacer // bucle interno   c
+			escribir sin saltar matriz(F,C),"|"
+		Fin Para
+		escribir ""
+	Fin Para
+	
+	escribir "la suma de los indices impares es: ", contador
+	
+FinAlgoritmo

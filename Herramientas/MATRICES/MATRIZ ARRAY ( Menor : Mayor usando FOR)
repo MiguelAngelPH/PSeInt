@@ -1,0 +1,71 @@
+Algoritmo arreglos
+	// Solicitar al usuario cantidad de pesonas a ingresar
+	// pedirle Nombre, Nota escrita y nota oral
+	// y en un tercer vector de promedios, calcular el promedio.
+	// a partir del promedio de cada alumno, 
+	// le informaremos si tiene que generar recuperatorio
+	// o aprobó la materia.
+	// igual o mayor a 7 esta aprobado, menor recupera.
+	// Informar que alumno tiene el mayor promedio
+	
+	Escribir "Ingresar cantidad de personas en la fila"
+	Leer cantidad
+	Dimension nombresDeAlumnos(cantidad)
+	Dimension notaEscrita(cantidad)
+	Dimension notaOral(cantidad)
+	Dimension promedio(cantidad) // es una formula  (n1+n2) / 2
+	Dimension resultado(cantidad)
+	
+	contador = 0
+	promedioMasAlto = -1
+	promedioMenor = 10
+	
+	// Generar un bucle.
+	Para i = 1 Hasta cantidad Con Paso 1 Hacer
+		Escribir "Persona numero ", i
+		Escribir "----------------------"
+		Escribir "Me das tu nombre?"
+		leer nombresDeAlumnos(i)
+		escribir "Me das tu nota escrita?"
+		leer notaEscrita(i)
+		Escribir "Me das tu nota oral?"
+		Leer notaOral(i)
+		// calculo el promedio
+		promedio(i) = (notaEscrita(i) + notaOral(i)) / 2
+		
+		si promedioMenor > promedio(i) Entonces
+			promedioMenor = promedio(i)
+			indPersonaMenPromedio = i
+		FinSi
+		
+		si promedioMasAlto < promedio(i) Entonces
+			promedioMasAlto = promedio(i)
+			indPersonaMayPromedio = i
+		FinSi
+
+		
+		// Pregunto si ese promedio esta aprobado o no
+		Si promedio(i) < 7 Entonces
+			resultado(i) = "DESAPROBADO"
+		SiNo
+			resultado(i) = "APROBADO"
+		FinSi
+	Fin Para
+	
+	Escribir ""
+	Escribir "------------------------------"
+	// recorrer los vectores para imprimir por pantalla sus contenidos.
+	Para i=1 Hasta cantidad Con Paso 1 Hacer
+		Escribir "-------------------------------------------"
+		Escribir "-> Nombre:       ", nombresDeAlumnos(i)
+		Escribir "-> Nota Escrita: ", notaEscrita(i)
+		Escribir "-> Nota oral:    ", notaOral(i)
+		Escribir "-> Promedio:     ", promedio(i)
+		Escribir "-> Usted esta:   ", resultado(i)
+	Fin Para
+	
+	Escribir "---------------"
+	Escribir "Nuestro mayor promedio es de: ", nombresDeAlumnos(indPersonaMayPromedio)
+	Escribir "Con un promedio de:           ", promedio(indPersonaMayPromedio), "  indice que guarde: " ,indPersonaMayPromedio
+	Escribir "el promedio menor   : ", promedio(indPersonaMenPromedio),  "   ,  Alumno : " nombresDeAlumnos(indPersonaMenPromedio)
+FinAlgoritmo

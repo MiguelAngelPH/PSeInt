@@ -1,0 +1,39 @@
+Algoritmo arreglos
+	// declare mi vector con 4 posiciones.
+	// variable del tamaño del vector
+//Generar un algoritmo, que solicite al usuario
+//Edades y nombres de 4 alumnos y luego imprimir en pantalla el resultado
+	
+	
+	
+	cantidad = 3
+	Dimension edadDeAlumnos(cantidad), nombresDeAlumnos(cantidad)
+	// Le asigno a cada posicion un valor (del mismo tipo)
+	escribir "escribe la edad (1)"
+	leer edadDeAlumnos(1)
+	escribir "escribe la edad(2)"
+	leer edadDeAlumnos(2)
+	escribir "escribe la edad(3)"
+	leer edadDeAlumnos(3)
+	Escribir "escribe un nombre(1)"
+	leer nombresDeAlumnos(1) 
+	Escribir "escribe un nombre(2)"
+	leer nombresDeAlumnos(2) 
+	Escribir "escribe un nombre(3)"
+	leer nombresDeAlumnos(3) 
+
+	
+	salir = Falso
+	
+	Mientras no salir Hacer
+		Escribir "Ingrese la edad que quiere conocer del 1 al 3"
+		Leer posicion
+		si posicion = 0 Entonces
+			salir = Verdadero
+		SiNo
+			Escribir "la edad solicitada es: ", edadDeAlumnos(posicion), " de: ", nombresDeAlumnos(posicion)
+		FinSi
+		
+	Fin Mientras
+	
+FinAlgoritmo
